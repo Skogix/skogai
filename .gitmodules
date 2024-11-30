@@ -13,3 +13,6 @@
 [submodule "src/argc-completions"]
 	path = src/argc-completions
 	url = git@github.com:Skogix/argc-completions.git
+[submodule "src/aichat-functions"]
+	path = src/aichat-functions
+	url = git@github.com:Skogix/llm-functions.git
