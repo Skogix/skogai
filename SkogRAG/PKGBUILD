@@ -1,0 +1,22 @@
+# Maintainer: Your Name <emil@skogsund.se>
+pkgname=skograg
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="RAGGARSKOGIX"
+arch=('any')
+url="https://skogix.se"
+license=('MIT')
+depends=('python')
+source=("http://localhost:8000/skograg-${pkgver}.tar.gz")
+sha256sums=('SKIP')  # Replace with actual checksum
+
+build() {
+    cd "$srcdir/skograg-${pkgver}"
+    python -m build
+}
+
+package() {
+    cd "$srcdir/skograg-${pkgver}"
+    python -m installer --destdir="$pkgdir" dist/*.whl
+}
+
