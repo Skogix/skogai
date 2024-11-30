@@ -7,3 +7,6 @@
 [submodule "src/aichat"]
 	path = src/aichat
 	url = https://github.com/skogix/aichat
+[submodule "src/argc"]
+	path = src/argc
+	url = git@github.com:Skogix/argc.git
