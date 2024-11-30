@@ -1,3 +1,6 @@
 [submodule "src/dotfiles"]
 	path = src/dotfiles
 	url = https://github.com/skogix/.dotfiles
+[submodule "src/ansible"]
+	path = src/ansible
+	url = https://github.com/skogix/.ansible
