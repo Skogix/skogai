@@ -1,2 +1,2 @@
 #!/bin/bash
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$SKOGAI_HOME/bin:$PATH"
