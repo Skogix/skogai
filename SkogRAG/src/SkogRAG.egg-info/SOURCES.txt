@@ -1,0 +1,8 @@
+pyproject.toml
+src/SkogRAG/__init__.py
+src/SkogRAG/main.py
+src/SkogRAG.egg-info/PKG-INFO
+src/SkogRAG.egg-info/SOURCES.txt
+src/SkogRAG.egg-info/dependency_links.txt
+src/SkogRAG.egg-info/requires.txt
+src/SkogRAG.egg-info/top_level.txt

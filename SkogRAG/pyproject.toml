@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SkogRAG"
+version = "0.1.0"
+description = "RAGGARSKOGIX!"
+authors = [
+    {name = "Emil Skogsund", email = "emil@skogsund.se"},
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+dependencies = ["llama-index"]  # Example dependencies
+
