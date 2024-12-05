@@ -2,7 +2,4 @@
 .env
 logs
 logs/skogai.log
-config/aichat/agents/demo/rag.yaml
-config/aichat/agents/todo/messages.md
-config/aichat/agents/demo/messages.md
-SkogRAG/SkogRAG
+config/aichat/messages.md
