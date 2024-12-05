@@ -1,0 +1,1 @@
+/home/skogix/skogai/config/zsh.d

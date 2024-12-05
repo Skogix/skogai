@@ -1,1 +1,1 @@
-source /home/skogix/.ssh/backup/openai.sh
+source /home/skogix/.ssh/vault/openai
