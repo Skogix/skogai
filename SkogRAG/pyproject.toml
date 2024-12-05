@@ -13,3 +13,6 @@ readme = "README.md"
 license = {file = "LICENSE"}
 dependencies = ["llama-index"]  # Example dependencies
 
+[project.scripts]
+skograg = "SkogRAG.main:main"
+
