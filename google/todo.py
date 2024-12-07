@@ -1,4 +1,5 @@
 import datetime
+import argparse
 
 todos = []
 
@@ -22,58 +23,60 @@ def view_todos():
         status = "[X]" if todo["completed"] else "[ ]"
         print(f"{i+1}. {status} {todo['task']} - Due: {todo['due_date'] or 'N/A'}, Priority: {todo['priority']}")
 
-def mark_complete():
+def mark_complete(index=None):
     """Marks a todo item as complete."""
-    view_todos()
-    try:
-        index = int(input("Enter the number of the todo to mark as complete: ")) - 1
+    if index is None:
+        view_todos()
+        try:
+            index = int(input("Enter the number of the todo to mark as complete: ")) - 1
+        except ValueError:
+            print("Invalid input.")
+            return
         if 0 <= index < len(todos):
             todos[index]["completed"] = True
             print("Todo marked as complete!")
         else:
             print("Invalid todo number.")
-    except ValueError:
-        print("Invalid input.")
 
 
-def delete_todo():
+def delete_todo(index=None):
     """Deletes a todo item."""
-    view_todos()
-    try:
-        index = int(input("Enter the number of the todo to delete: ")) - 1
+    if index is None:
+        view_todos()
+        try:
+            index = int(input("Enter the number of the todo to delete: ")) - 1
+        except ValueError:
+            print("Invalid input.")
+            return
         if 0 <= index < len(todos):
             del todos[index]
             print("Todo deleted!")
         else:
             print("Invalid todo number.")
-    except ValueError:
-        print("Invalid input.")
 
 
-while True:
-    print("\nTodo Manager")
-    print("1. Add todo")
-    print("2. View todos")
-    print("3. Mark as complete")
-    print("4. Delete todo")
-    print("5. Exit")
+def main():
+    parser = argparse.ArgumentParser(description="Todo Manager")
+    parser.add_argument("--add", action="store_true", help="Add a new todo")
+    parser.add_argument("--view", action="store_true", help="View all todos")
+    parser.add_argument("--complete", type=int, help="Mark a todo as complete by its number")
+    parser.add_argument("--delete", type=int, help="Delete a todo by its number")
 
-    choice = input("Enter your choice: ")
+    args = parser.parse_args()
 
-    if choice == "1":
+    if args.add:
         add_todo()
-    elif choice == "2":
+    elif args.view:
         view_todos()
-    elif choice == "3":
-        mark_complete()
-    elif choice == "4":
-        delete_todo()
-    elif choice == "5":
-        break
+    elif args.complete is not None:
+        mark_complete(args.complete)
+    elif args.delete is not None:
+        delete_todo(args.delete)
     else:
-        print("Invalid choice.")
+        parser.print_help()
 
-print("Exiting...")
+if __name__ == "__main__":
+    main()
 # ```
 #
 # To use this:
