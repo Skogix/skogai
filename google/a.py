@@ -1,5 +1,6 @@
 from vertexai.preview import rag
 from vertexai.preview.generative_models import GenerativeModel, Tool
+import os
 import vertexai
 
 # Create a RAG Corpus, Import Files, and Generate a response
@@ -10,7 +11,7 @@ import vertexai
 # paths = ["https://drive.google.com/file/d/123", "gs://my_bucket/my_files_dir"]  # Supports Google Cloud Storage and Google Drive Links
 
 # Initialize Vertex AI API once per session
-vertexai.init(project=$GOOGLE_PROJECT_ID, location="us-central1")
+vertexai.init(project=os.environ.get("GOOGLE_PROJECT_ID"), location="us-central1")
 
 # Create RagCorpus
 # Configure embedding model, for example "text-embedding-004".
