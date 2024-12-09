@@ -10,5 +10,5 @@ else
     exit 1
 fi
 
-# Install lazygit and dotenv
-$installer -S lazygit dotenv
+# Install lazygit and direnv
+$installer -S lazygit direnv
