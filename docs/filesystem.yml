@@ -1,0 +1,11 @@
+- path: .gitignore
+  description: |
+    Specifies files and directories that should be ignored by Git. This includes temporary files and environment-specific configurations.
+
+- path: docs/setup.md
+  description: |
+    Documentation for setting up the project. This file is currently empty and should be filled with setup instructions.
+
+- path: docs/filesystem.yml
+  description: |
+    Provides a description of the project's file structure, including paths and purposes of each file or directory.
