@@ -1,0 +1,13 @@
+Usage: dotenv [OPTIONS] COMMAND [ARGS]...
+
+  This script is used to manage environment variables.
+
+Options:
+  --version  Show the version and exit.
+  --help     Show this message and exit.
+
+Commands:
+  get     Retrieve the value of a variable.
+  list    List all variables.
+  set     Set the value of a variable.
+  unset   Remove a variable.
