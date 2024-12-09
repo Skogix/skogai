@@ -122,7 +122,7 @@ architect: true
 #max-chat-history-tokens: xxx
 
 ## Specify the .env file to load (default: .env in git root)
-#env-file: .env
+env-file: .envrc
 
 #################
 # Cache Settings:
